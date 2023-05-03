@@ -1,10 +1,8 @@
 package com.example.networkwithretrofit.model
 
-
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
-data class ResponseDataNewsItem(
+data class ResponseUpdateNews(
     @SerializedName("author")
     val author: String,
     @SerializedName("createdAt")
@@ -15,6 +13,12 @@ data class ResponseDataNewsItem(
     val id: String,
     @SerializedName("image")
     val image: String,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("password")
+    val password: String,
     @SerializedName("title")
-    val title: String
-): Serializable
+    val title: String,
+    @SerializedName("username")
+    val username: String
+)

@@ -7,6 +7,7 @@
     android:id="@+id/btnCard">
 
     <RelativeLayout
+        android:id="@+id/klikDetail"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -32,6 +33,23 @@
             android:layout_below="@+id/titleNews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/deleteCar"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/editCar"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/deleteCar"
+            android:src="@drawable/ic_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
 
     </RelativeLayout>
 
