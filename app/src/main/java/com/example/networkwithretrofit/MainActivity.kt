@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -33,6 +35,16 @@ class MainActivity : AppCompatActivity() {
 
         }
         setVmtoAdapter()
+
+    val crashButton = Button(this)
+    crashButton.text = "Test Crash"
+    crashButton.setOnClickListener {
+        throw RuntimeException("Test Crash") // Force a crash
+    }
+
+    addContentView(crashButton, ViewGroup.LayoutParams(
+        ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.WRAP_CONTENT))
     }
 
         fun setVmtoAdapter(){
